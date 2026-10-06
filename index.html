@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Task Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Daily planner</p>
+          <h1>Focus Board</h1>
+        </div>
+        <button id="clear-done" class="ghost-button" type="button">Clear done</button>
+      </header>
+
+      <section class="panel">
+        <form id="task-form" class="task-form">
+          <label class="sr-only" for="task-input">Add a task</label>
+          <input
+            id="task-input"
+            name="task"
+            type="text"
+            placeholder="Add a task for today..."
+            autocomplete="off"
+            maxlength="90"
+          />
+          <button type="submit">Add task</button>
+        </form>
+
+        <ul id="task-list" class="task-list" aria-live="polite"></ul>
+      </section>
+
+      <aside class="stats" aria-label="Task summary">
+        <div class="stat-card">
+          <span class="label">Total</span>
+          <strong id="total-count">0</strong>
+        </div>
+        <div class="stat-card">
+          <span class="label">Left</span>
+          <strong id="remaining-count">0</strong>
+        </div>
+        <div class="stat-card accent">
+          <span class="label">Done</span>
+          <strong id="done-count">0</strong>
+        </div>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
