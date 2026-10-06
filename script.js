@@ -105,7 +105,7 @@ taskForm.addEventListener('submit', (event) => {
     done: false,
   });
 
-  taskInput.value = '';
+  taskInput.value = "";
   saveTasks();
   render();
   taskInput.focus();
